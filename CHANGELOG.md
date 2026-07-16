@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-16
+
+- Replaced the Special Order email link with a new `order.html` page.
+- Wired the order form to Formspree (`https://formspree.io/f/xwvgvgny`) so customers can submit up to 10 title/author pairs directly on the website.
+- Updated Home and History navigation to point to the new order page.
+
 ## 2026-06-25
 
 - Switched footer and Special Order button to Lora serif to match body text.

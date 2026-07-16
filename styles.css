@@ -1,7 +1,7 @@
 /* ---
    styles.css
    Layout and visual styling for The Webster Groves Bookshop site.
-   Used by index.html and history.html.
+   Used by index.html, history.html, and order.html.
 --- */
 
 *,
@@ -233,6 +233,152 @@ body {
   margin: 0;
 }
 
+/* --- Special order form page --- */
+
+.order-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex: 1;
+  padding: 0.5rem 0 2.5rem;
+}
+
+.order-intro {
+  max-width: 40rem;
+}
+
+.order-title {
+  margin: 0 0 0.75rem;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.order-intro p {
+  margin: 0;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-width: 44rem;
+}
+
+.order-fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.order-legend {
+  margin-bottom: 1rem;
+  padding: 0;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.order-hint {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  color: #555555;
+}
+
+.order-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.85rem;
+}
+
+.order-field label {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.order-required {
+  font-weight: 400;
+  color: #555555;
+}
+
+.order-optional {
+  font-weight: 400;
+  color: #777777;
+}
+
+.order-field input,
+.order-field textarea {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid rgba(44, 44, 44, 0.25);
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #2c2c2c;
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.order-field input:focus,
+.order-field textarea:focus {
+  outline: 2px solid #b52b2b;
+  outline-offset: 2px;
+  border-color: #b52b2b;
+}
+
+.order-field textarea {
+  resize: vertical;
+  min-height: 6rem;
+}
+
+.order-book-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.order-book-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+.order-honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.order-submit {
+  align-self: flex-start;
+  min-height: 44px;
+  padding: 0.65rem 1.35rem;
+  border: 1px solid rgba(44, 44, 44, 0.15);
+  border-radius: 4px;
+  background-color: #b52b2b;
+  color: #ffffff;
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.order-submit:hover,
+.order-submit:focus-visible {
+  background-color: #9a2424;
+  outline: 2px solid #b52b2b;
+  outline-offset: 2px;
+}
+
+.order-submit:active {
+  transform: translateY(1px);
+}
+
 /* --- Footer --- */
 
 .footer {
@@ -288,9 +434,19 @@ body {
   }
 
   .home-main,
-  .history-main {
+  .history-main,
+  .order-main {
     gap: 1.75rem;
     padding-bottom: 1.75rem;
+  }
+
+  .order-title {
+    font-size: 1.65rem;
+  }
+
+  .order-book-row {
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .home-bottom {

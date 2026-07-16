@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<!--
+  Special Order page for The Webster Groves Bookshop.
+  Submits book requests to Formspree (https://formspree.io/f/xwvgvgny), which emails the shop.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Order — The Webster Groves Bookshop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="header-brand">
+        <img
+          src="original_logo.png"
+          alt="The Webster Groves Bookshop logo"
+          class="header-logo"
+        >
+        <span class="header-name">The Webster Groves Bookshop</span>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="history.html">History</a>
+        <a class="nav-link" href="order.html" aria-current="page">Special Order a Book</a>
+      </nav>
+    </header>
+
+    <main class="order-main">
+      <div class="order-intro">
+        <h1 class="order-title">Special Order a Book</h1>
+        <p>
+          Fill out the form below and we will email you back with a price, asking for a confirmation.
+        </p>
+      </div>
+
+      <!-- CHANGED: Form posts to Formspree instead of opening an email draft -->
+      <form
+        class="order-form"
+        action="https://formspree.io/f/xwvgvgny"
+        method="POST"
+      >
+        <!-- Sets the subject line on the email Formspree sends you -->
+        <input type="hidden" name="_subject" value="Special Order from Website">
+
+        <!-- Honeypot field: hidden from people, catches spam bots -->
+        <input type="text" name="_gotcha" class="order-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <fieldset class="order-fieldset">
+          <legend class="order-legend">Your contact info</legend>
+
+          <div class="order-field">
+            <label for="customer-name">Your name <span class="order-required">(required)</span></label>
+            <input type="text" id="customer-name" name="name" required autocomplete="name">
+          </div>
+
+          <div class="order-field">
+            <label for="customer-email">Your email <span class="order-required">(required)</span></label>
+            <input type="email" id="customer-email" name="email" required autocomplete="email">
+          </div>
+
+          <div class="order-field">
+            <label for="customer-phone">Phone <span class="order-optional">(optional)</span></label>
+            <input type="tel" id="customer-phone" name="phone" autocomplete="tel">
+          </div>
+        </fieldset>
+
+        <fieldset class="order-fieldset">
+          <legend class="order-legend">Books to order</legend>
+          <p class="order-hint">At least one title is required. Leave extra rows blank if you do not need them.</p>
+
+          <div class="order-book-grid">
+            <div class="order-book-row">
+              <div class="order-field">
+                <label for="title-1">Title 1 <span class="order-required">(required)</span></label>
+                <input type="text" id="title-1" name="title_1" required>
+              </div>
+              <div class="order-field">
+                <label for="author-1">Author 1</label>
+                <input type="text" id="author-1" name="author_1">
+              </div>
+            </div>
+
+            <div class="order-book-row">
+              <div class="order-field">
+                <label for="title-2">Title 2</label>
+                <input type="text" id="title-2" name="title_2">
+              </div>
+              <div class="order-field">
+                <label for="author-2">Author 2</label>
+                <input type="text" id="author-2" name="author_2">
+              </div>
+            </div>
+
+            <div class="order-book-row">
+              <div class="order-field">
+                <label for="title-3">Title 3</label>
+                <input type="text" id="title-3" name="title_3">
+              </div>
+              <div class="order-field">
+                <label for="author-3">Author 3</label>
+                <input type="text" id="author-3" name="author_3">
+              </div>
+            </div>
+
+            <div class="order-book-row">
+              <div class="order-field">
+                <label for="title-4">Title 4</label>
+                <input type="text" id="title-4" name="title_4">
+              </div>
+              <div class="order-field">
+                <label for="author-4">Author 4</label>
+                <input type="text" id="author-4" name="author_4">
+              </div>
+            </div>
+
+            <div class="order-book-row">
+              <div class="order-field">
+                <label for="title-5">Title 5</label>
+                <input type="text" id="title-5" name="title_5">
+              </div>
+              <div class="order-field">
+                <label for="author-5">Author 5</label>
+                <input type="text" id="author-5" name="author_5">
+              </div>
+            </div>
+
+            <div class="order-book-row">
+              <div class="order-field">
+                <label for="title-6">Title 6</label>
+                <input type="text" id="title-6" name="title_6">
+              </div>
+              <div class="order-field">
+                <label for="author-6">Author 6</label>
+                <input type="text" id="author-6" name="author_6">
+              </div>
+            </div>
+
+            <div class="order-book-row">
+              <div class="order-field">
+                <label for="title-7">Title 7</label>
+                <input type="text" id="title-7" name="title_7">
+              </div>
+              <div class="order-field">
+                <label for="author-7">Author 7</label>
+                <input type="text" id="author-7" name="author_7">
+              </div>
+            </div>
+
+            <div class="order-book-row">
+              <div class="order-field">
+                <label for="title-8">Title 8</label>
+                <input type="text" id="title-8" name="title_8">
+              </div>
+              <div class="order-field">
+                <label for="author-8">Author 8</label>
+                <input type="text" id="author-8" name="author_8">
+              </div>
+            </div>
+
+            <div class="order-book-row">
+              <div class="order-field">
+                <label for="title-9">Title 9</label>
+                <input type="text" id="title-9" name="title_9">
+              </div>
+              <div class="order-field">
+                <label for="author-9">Author 9</label>
+                <input type="text" id="author-9" name="author_9">
+              </div>
+            </div>
+
+            <div class="order-book-row">
+              <div class="order-field">
+                <label for="title-10">Title 10</label>
+                <input type="text" id="title-10" name="title_10">
+              </div>
+              <div class="order-field">
+                <label for="author-10">Author 10</label>
+                <input type="text" id="author-10" name="author_10">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="order-fieldset">
+          <legend class="order-legend">Special notes</legend>
+          <div class="order-field">
+            <label for="special-notes">Anything else we should know? <span class="order-optional">(optional)</span></label>
+            <textarea id="special-notes" name="special_notes" rows="4"></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="order-submit">Submit order request</button>
+      </form>
+    </main>
+
+    <footer class="footer">
+      <p class="footer-text">
+        Tuesday - Saturday 12:00pm - 4:00pm<br>
+        27 North Gore Avenue<br>
+        Webster Groves, MO 63119<br>
+        314-968-1185<br>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
