@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-07-17
+
+- Updated the Special Order form Formspree endpoint to `https://formspree.io/f/xwvglzdd` (new email recipient).
+
 ## 2026-07-16
 
 - Replaced the Special Order email link with a new `order.html` page.
